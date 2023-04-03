@@ -22,6 +22,7 @@ module Halogen.Svg.Indexed
   , SVGpolyline
   , SVGpolygon
   , SVGpath
+  , SVGpattern
   , SVGrect
   , SVGtext
   , AnimationAttributes
@@ -245,6 +246,22 @@ type SVGpath
   +
     ( d :: String
     , transform :: String
+    )
+
+type SVGpattern
+  = GlobalAttributes
+  +
+    ( height :: Number
+    , href :: String
+    , patternContentUnits :: String
+    , patternTransform :: String
+    , patternUnits :: String
+    , preserveAspectRatio :: String
+    , viewBox :: String
+    , width :: Number
+    , x :: Number
+    , xlinkHref :: String
+    , y :: Number
     )
 
 type SVGrect

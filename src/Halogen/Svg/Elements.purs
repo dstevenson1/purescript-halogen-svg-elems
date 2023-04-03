@@ -12,6 +12,7 @@ module Halogen.Svg.Elements
   , ellipse
   , rect
   , path
+  , pattern
   , line
   , polyline
   , polygon
@@ -62,6 +63,9 @@ rect props = element (ElemName "rect") props []
 
 path :: forall p i. Leaf I.SVGpath p i
 path props = element (ElemName "path") props []
+
+pattern :: forall p i. Node I.SVGpattern p i
+pattern = element (ElemName "pattern")
 
 line :: forall p i. Leaf I.SVGline p i
 line props = element (ElemName "line") props []
