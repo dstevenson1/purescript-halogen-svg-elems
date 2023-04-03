@@ -288,7 +288,7 @@ strokeLineJoin = attr (H.AttrName "stroke-linejoin") <<< printStrokeLineJoin
 strokeMiterLimit :: forall r i. Number -> IProp (strokeMiterLimit :: String | r) i
 strokeMiterLimit = attr (H.AttrName "stroke-miterlimit") <<< show <<< max 1.0
 
-strokeOpacity :: forall r i. Number -> IProp (strokeOpacity :: String | r) i
+strokeOpacity :: forall r i. Number -> IProp (strokeOpacity :: Number | r) i
 strokeOpacity = attr (H.AttrName "stroke-opacity") <<< show
 
 strokeWidth :: forall r i. Number -> IProp (strokeWidth :: Number | r) i
