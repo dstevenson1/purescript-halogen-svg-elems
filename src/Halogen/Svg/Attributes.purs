@@ -243,8 +243,8 @@ pathLength = attr (H.AttrName "pathLength") <<< show
 patternContentUnits :: forall r i. String -> IProp (patternContentUnits :: String | r) i
 patternContentUnits = attr (H.AttrName "patternContentUnits")
 
-patternTransform :: forall r i. String -> IProp (patternTransform :: String | r) i
-patternTransform = attr (H.AttrName "patternTransform")
+patternTransform :: forall r i. Array Transform -> IProp (patternTransform :: String | r) i
+patternTransform = attr (H.AttrName "patternTransform") <<< joinWith " " <<< map printTransform
 
 patternUnits :: forall r i. String -> IProp (patternUnits :: String | r) i
 patternUnits = attr (H.AttrName "patternUnits")
